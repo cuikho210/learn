@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Bai 3 - HTML</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="./">
+	<meta name="theme-color" content="#1b1b1b">
+	
+	<style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Sans-Serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .container {
+            position: relative;
+            width: 350px;
+            max-width: calc(100% - 3rem);
+            padding: 1rem;
+            display: block;
+            margin: auto;
+        }
+        
+        .primary--text {
+            color: #ffa31a;
+        }
+        
+        .header {
+            text-align: center;
+            font-size: 200%;
+            margin-bottom: 0px;
+        }
+        
+        .sub-header {
+            text-align: center;
+            font-size: 11px;
+            margin-top: 0px;
+            color: #808080;
+        }
+        
+        .sub-text {
+            margin-top: 1.5rem;
+            font-size: 11px;
+        }
+        
+        input {
+            width: calc(100% - 1rem);
+            padding: .6rem;
+            background: #000;
+            border: 1px solid #292929;
+            color: #fff;
+            display: block;
+            margin-bottom: .8rem;
+        }
+        
+        input:focus {
+            outline: 1px solid #808080;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding-top: .7rem;
+            padding-bottom: .7rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            background-color: #292929;
+            color: #D0D0D0;
+            border-radius: 4px;
+            margin-top: .5rem;
+            margin-right: .8rem;
+            border: none;
+        }
+	</style>
+</head>
+<body>
+    <form class="container">
+        <div>
+            <h1 class="header">Sign up for free</h1>
+            <p class="sub-header">and enhance your experience</p>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Username (6+ characters)">
+            <input type="password" placeholder="Password (6+ characters)">
+        </div>
+        
+        <div>
+            <button type="submit" class="btn">Sign Up!</button>
+            Or
+            <span
+            class="primary--text"
+            style="margin-left: .5rem">
+                Log in
+            </span>
+        </div>
+        
+        <div class="sub-text">
+            <p>
+                By signing up, you agree to our
+                <span class="primary--text">
+                    Tems and Conditions.
+                </span>
+            </p>
+            
+            <p class="primary--text">
+                Resend confirmation email
+            </p>
+        </div>
+    </form>
+</body>
+</html>

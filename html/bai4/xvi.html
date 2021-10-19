@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Bai 3 - HTML</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="./">
+	<meta name="theme-color" content="#000">
+	<!-- #de2600 -->
+	
+	<style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Sans-Serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .container {
+            position: relative;
+            width: 500px;
+            max-width: calc(100% - 3rem);
+            padding: 1rem;
+            display: block;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .red-block {
+            position: absolute;
+            top: 0px;
+            left: -140px;
+            width: 300px;
+            height: 100px;
+            background-color: #de2600;
+            transform: rotate(-55deg);
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 70px;
+            right: 70px;
+            padding: .5rem;
+            background-color: #000;
+            transform: rotate(55deg);
+            font-size: 150%;
+            font-weight: bold;
+        }
+        
+        .main {
+            margin-top: -.85rem;
+        }
+        
+        .login-form {
+            margin-top: 1rem;
+            font-size: 13px;
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        input {
+            width: calc(100% - 3rem);
+            padding: .6rem;
+            background: #292929;
+            border: 1px solid #808080;
+            color: #fff;
+            display: block;
+            margin: .25rem;
+            margin-left: 1.3rem;
+        }
+        
+        input:focus {
+            outline: 1px solid #808080;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding-top: .7rem;
+            padding-bottom: .7rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            background-color: #808080;
+            color: #D0D0D0;
+            border-radius: 3px;
+            margin-top: .5rem;
+            margin-right: .8rem;
+            border: none;
+            font-style: italic;
+        }
+	</style>
+</head>
+<body>
+    <form class="container">
+        <div class="red-block">
+            <div class="logo">
+                <span style="color: #de2600">
+                    X
+                </span>
+                VIDE
+            </div>
+        </div>
+        
+        <div class="main">
+            <h1 style="text-align: center;">
+                MEMBERS
+            </h1>
+            
+            <h4 style="border-bottom: 1px solid #fff; padding-bottom: .3rem;">
+                Create a new account:
+            </h4>
+            
+            <table class="login-form" border='0' width='100%'>
+                <tr>
+                    <td width='30%'>
+                        Your email (login):
+                    </td>
+                    
+                    <td>
+                        <input type="email">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td width='30%'>
+                        Profile name:
+                    </td>
+                    
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td width='30%'>
+                        Password:
+                    </td>
+                    
+                    <td>
+                        <input type="password">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td width='30%'>
+                        Password again:
+                    </td>
+                    
+                    <td>
+                        <input type="password">
+                    </td>
+                </tr>
+            </table>
+            
+            <div style="font-size: 13px; margin-top: 1rem; margin-bottom: 1rem;">
+                <input type="checkbox" style="width: 1rem; display: inline;">
+                By signing up, you argee to our
+                <u>Terms of service</u>
+                and our
+                <u>Privacy policy</u>.
+            </div>
+            
+            <button class="btn">Next</button>
+        </div>
+    </form>
+</body>
+</html>

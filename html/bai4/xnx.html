@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Bai 3 - HTML</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="./">
+	<meta name="theme-color" content="#000066">
+	
+	<style>
+        body {
+            background-color: #000066;
+            color: #fff;
+            font-family: Sans-Serif;
+            margin: 0px;
+            padding: 0px;
+            margin-top: 3rem;
+        }
+        
+        .container {
+            position: relative;
+            width: 350px;
+            max-width: calc(100% - 3rem);
+            padding: 1rem;
+            display: block;
+            margin: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #000090;
+            padding: .3em;
+            padding-left: .6em;
+            padding-right: .6em;
+            border: 1px solid #2362ed;
+            font-size: 11px;
+            color: #fff;
+        }
+        
+        .my-3 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .block {
+            position: relative;
+            background-color: #000090;
+            padding: .3rem;
+            margin-top: 1rem;
+            border: 1px solid #2362ed;
+        }
+        
+        input {
+            padding: .3rem;
+            width: calc(100% - 0.9rem);
+        }
+        
+        textarea {
+            padding: .3rem;
+            width: calc(100% - 0.8rem);
+        }
+	</style>
+</head>
+<body>
+    <form class="container">
+        <div>
+            <div class="btn">
+                Load next 10 comments
+            </div>
+            
+            <div class="btn">
+                Load all comments
+            </div>
+        </div>
+        
+        <div class="block">
+            <input type="text" placeholder="Your name (optional)">
+            <textarea placeholder="Write your message"></textarea>
+            
+            <div style="text-align: right;">
+                <button type="reset" class="btn" style="border: none;">Cancel</button>
+                <button type="submit" class="btn">Send</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
