@@ -138,6 +138,36 @@ h1 {
     border-bottom: 2px solid #ffa31a;
 }
 
+#paging {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#paging span {
+    padding: .5rem 1rem;
+    background-color: #292929;
+    margin: .25rem;
+}
+
+#paging span:hover {
+    color: #ffa31a;
+}
+
+#paging span:nth-child(1) {
+    background-color: #ffa31a;
+    color: #000;
+}
+
+#paging div {
+    padding: .5rem 1rem;
+    background-color: #292929;
+    margin: .25rem;
+    border: 2px solid #ffa31a;
+    color: #ffa31a;
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 599px) {
     .tag {
         width: calc(50% - .75rem);
