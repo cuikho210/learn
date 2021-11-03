@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 - Tính năm âm lịch</title>
+</head>
+<body>
+    <form style="
+        width: 400px;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    "
+    name="tinh_nam_am_lich"
+    method="post"
+    action="">
+        <h2 style="
+        background-color: #4e4eff;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        padding: .25rem 0px;
+        margin: 0px;
+    ">tính năm âm lịch</h2>
+
+        <div style="
+            background-color: rgb(175, 203, 255);
+            display: flex;
+            justify-content: center;
+            color: blue;
+            padding: .5rem;
+        ">
+            <div style="text-align: center;">
+                Năm dương lịch
+                <br>
+                <input id="inp" type="text" size="4">
+            </div>
+
+            <div style="margin: 1rem 2rem;">
+                <button type="button" onclick="init()">=></button>
+            </div>
+
+            <div style="text-align: center;">
+                Năm âm lịch
+                <br>
+                <input id="outp" type="text" size="4" readonly>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function init() {
+            let duong = document.getElementById('inp').value;
+            let am = document.getElementById('outp');
+
+            let can = '';
+            let chi = '';
+
+            switch ((duong - 3) % 10) {
+                case 0:
+                    can = "Qúy";
+                    break;
+                case 1:
+                    can = "Giáp";
+                    break;
+                case 2:
+                    can = "Ất";
+                    break;
+                case 3:
+                    can = "Bính";
+                    break;
+                case 4:
+                    can = "Đinh";
+                    break;
+                case 5:
+                    can = "Mậu";
+                    break;
+                case 6:
+                    can = "Kỷ";
+                    break;
+                case 7:
+                    can = "Canh";
+                    break;
+                case 8:
+                    can = "Tân";
+                    break;
+                case 9:
+                    can = "Nhâm";
+                    break;
+            }
+            
+            switch ((duong - 3) % 12) {
+                case 0: 
+                    chi = "Hợi";
+                    break;
+                case 1:
+                    chi = "Tý";
+                    break;
+                case 2:
+                    chi = "Sửu";
+                    break;
+                case 3:
+                    chi = "Dần";
+                    break;
+                case 4:
+                    chi = "Mão";
+                    break;
+                case 5:
+                    chi = "Thìn";
+                    break;
+                case 6:
+                    chi = "Tị";
+                    break;
+                case 7:
+                    chi = "Ngọ";
+                    break;
+                case 8:
+                    chi = "Mùi";
+                    break;
+                case 9:
+                    chi = "Thân";
+                    break;
+                case 10:
+                    chi = "Dậu";
+                    break;
+                case 11:
+                    chi = "Tuất";
+                    break;
+            }
+
+            am.value = can + " " + chi;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1- Tính Lương - Javascript</title>
+</head>
+<body>
+    Nhập lương nhân viên (Triệu đồng):
+    <input type="text" id="luong">
+    <br>
+
+    <button onclick='init()'>Tính</button>
+    <hr>
+
+    <p>
+        Thuế thu nhập:
+        <span id="thue"></span>
+    </p>
+
+    <p>
+        Lương ròng:
+        <span id="luong-rong"></span>
+    </p>
+
+    <script>
+        let inp_luong = document.getElementById('luong');
+        let lbl_thue = document.getElementById('thue');
+        let lbl_luongRong = document.getElementById('luong-rong');
+
+        function init() {
+            let luong = parseInt(inp_luong.value);
+            let thue = 0;
+
+            if (luong == 15) thue = luong * 30 / 100;
+            else if (luong >= 7 && luong < 15) thue = luong * 20 / 100;
+            else if (luong < 7) thue = luong * 10 / 100;
+
+            lbl_thue.innerHTML = thue + " triệu VNĐ";
+            lbl_luongRong.innerHTML = (luong - thue) + " triệu VNĐ";
+        }
+    </script>
+</body>
+</html>

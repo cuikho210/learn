@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3 - Tính ngày trong tháng</title>
+</head>
+<body>
+    <form
+    style="
+        width: 400px;
+        max-width: 100%;
+        display: block;
+        margin: 0px auto;
+    "
+    name="tinh_ngay"
+    action=""
+    method="post">
+        <h2 style="
+            background-color: #ff907f;
+            color: #000;
+            padding: .25rem;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0px;
+        ">
+            tính ngày trong tháng
+        </h2>
+
+        <div style="
+            background-color: #ffc2d3;
+            padding: .5rem;
+        ">
+            <table>
+                <tr>
+                    <td>
+                        Tháng/năm:
+                    </td>
+
+                    <td>
+                        <input id="thang" type="text" size="2">
+                        /
+                        <input id="nam" type="text" size="4">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="init()" type="button">Tính số ngày</button>
+                    </td>
+                </tr>
+            </table>
+
+            <p style="text-align: center;">
+                <input id="result" type="text" readonly size="30">
+            </p>
+        </div>
+    </form>
+
+    <script>
+        function init() {
+            let thang = parseInt(document.getElementById('thang').value);
+            let nam = parseInt(document.getElementById('nam').value);
+            let ngay = 0;
+            
+            switch (thang) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    ngay = 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    ngay = 30;
+                    break;
+                case 2:
+                    if (nam % 400 == 0 || (nam % 4 == 0 && nam % 100 !=0)) {
+                        ngay = 29;
+                    }
+                    else {
+                        ngay = 28;
+                    }
+            }
+
+            let result = `Tháng ${thang} năm ${nam} có ${ngay} ngày`;
+            document.getElementById('result').value = result;
+        }
+    </script>
+</body>
+</html>
