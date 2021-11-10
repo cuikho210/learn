@@ -12,13 +12,24 @@ let arr = [];
 
 // Add number
 function addNumber () {
+    sum = 0;
+    max = 0;
+    min = 0;
+    arr = [];
+
+    document.getElementById('numbers').innerHTML = '';
+
     let inp = document.getElementById('input-number');
     let num = parseFloat(inp.value);
     
-    if (num / 1 !== num) return false;
+    if (num / 1 !== num || num < 1) return false;
 
-    arr.push(num);
-    handl(num);
+    for (let i = 0; i < num; i++) {
+        let rand = Math.round(Math.random() * 20);
+
+        arr.push(rand);
+        handl(rand);
+    }
 
     inp.value = '';
     inp.focus();
