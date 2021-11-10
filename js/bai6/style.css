@@ -1,0 +1,145 @@
+body {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    color: #499dfc;
+    padding: 1rem 0px;
+    text-align: center;
+}
+
+h4 {
+    color: #499dfc;
+    padding: .5rem 0px;
+    border-bottom: 1px solid #499dfc;
+}
+
+b {
+    display: block;
+    color: #499dfc;
+    padding: .5rem 0px;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+    color: #499dfc;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+input:focus {
+    outline: none;
+}
+
+.bg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #94ffa9, #94fff4);
+}
+
+.tag {
+    position: relative;
+    display: block;
+    margin: 1rem auto;
+    box-sizing: border-box;
+    width: 720px;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, .25);
+    padding: 1rem;
+    border-radius: .5rem;
+    backdrop-filter: blur(.25rem);
+    box-shadow: 0px 0px 1rem 1px rgba(61, 32, 32, 0.1);
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+
+    /* No select */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn:active {
+    top: 1px;
+}
+
+/* Button 1 */
+.btn1 {
+    background: linear-gradient(to bottom right, #b0fff7, #acffbd);
+    color: #499dfc;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 3px 3px .5rem 1px rgba(0, 0, 0, .1);
+    text-transform: uppercase;
+}
+
+.btn1::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    width: 0px;
+    height: 120%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: width .4s, left .4s, background-color .4s;
+    filter: blur(.25rem);
+}
+
+.btn1:hover::after {
+    left: -10%;
+    width: 120%;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+/* Number */
+.number {
+    display: inline-block;
+    padding: .5rem 1rem;
+    margin: .25rem;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: .5rem;
+    
+    /* Animation */
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

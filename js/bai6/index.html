@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#acffbd">
+    <title>Bài 6 - JS</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="bg.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <canvas id="bg" class="bg"></canvas>
+
+    <div class="tag">
+        <h3>Bài 2 - Buổi 3</h3>
+
+        <h4>Nhập số vào mảng: </h4>
+
+        <form style="display: flex;" onsubmit="return addNumber()">
+            <input type="number" id="input-number">
+
+            <div
+            class="btn btn1"
+            style="margin: 0px; margin-left: 1rem; font-weight: bold;"
+            onclick="addNumber()">
+                +
+            </div>
+        </form>
+
+        <div>
+            <h4>Kết quả: </h4>
+            
+            <b>Mảng: </b>
+            <div id="numbers"></div>
+
+            <b>Số lớn nhất: </b>
+            <div id="max" class="number"></div>
+
+            <b>Số nhỏ nhất: </b>
+            <div id="min" class="number"></div>
+
+            <b>Tổng: </b>
+            <div id="sum" class="number"></div>
+        </div>
+    </div>
+</body>
+</html>
