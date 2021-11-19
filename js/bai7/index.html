@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 5 - JS</title>
+    <meta name="theme-color" content='#000'>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="tag">
+        <form action="" onsubmit="return init()">
+            <h4>Register</h4>
+
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" name="js-buoi4-name" id="name">
+                <span class="log" id="log-name">Invalid name</span>
+            </p>
+    
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="js-buoi4-email" id="email">
+                <span class="log" id="log-email">Invalid email</span>
+            </p>
+
+            <p>
+                <label for="address">Address:</label>
+                <input type="text" name="js-buoi4-address" id="address">
+                <span class="log" id="log-address">Invalid address</span>
+            </p>
+
+            <p>
+                <span>Gender</span>
+                
+                <label class="radio" style="margin-top: .25rem;">
+                    <input type="radio" name="gender">
+                    <span>Male</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" name="gender">
+                    <span>Female</span>
+                </label>
+
+                <span class="log" id="log-gender">Gender is blank</span>
+            </p>
+
+            <p>
+                <span>Interests</span>
+
+                <label class="radio" style="margin-top: .25rem;">
+                    <input type="radio" name="interest">
+                    <span>Programing</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" name="interest">
+                    <span>Music</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" name="interest">
+                    <span>Movie</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" name="interest">
+                    <span>Game</span>
+                </label>
+
+                <span class="log" id="log-interest">Interest is blank</span>
+            </p>
+
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="js-buoi4-password" id="password">
+                <span class="log" id="log-password">Password must be between 6 and 30 characters</span>
+            </p>
+
+            <p>
+                <label for="re-password">Re-Password:</label>
+                <input type="password" name="js-buoi4-re-password" id="re-password">
+                <span class="log" id="log-re-password">Password incorrect</span>
+            </p>
+
+            <button class="btn btn1">Send</button>
+        </form>
+    </div>
+</body>
+</html>
