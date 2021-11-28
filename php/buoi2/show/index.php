@@ -1,11 +1,11 @@
 <?php
-$name = empty($_POST['name']) ? 'Em không có tên' : $_POST['name'];
-$email = empty($_POST['email']) ? 'Em không có email' : $_POST['email'];
-$address = empty($_POST['address']) ? 'Em không có nhà' : $_POST['address'];
-$interest = empty($_POST['interest']) ? 'Em không thích gì cả' : $_POST['interest'];
-$gender = empty($_POST['gender']) ? 'Em là gay' : $_POST['gender'];
-$date = empty($_POST['date']) ? 'Em chưa được sinh ra' : $_POST['date'];
-$pwd = empty($_POST['pwd']) ? 'Em không nhớ mật khẩu của em' : $_POST['pwd'];
+$name = empty($_GET['name']) ? 'Em không có tên' : $_GET['name'];
+$email = empty($_GET['email']) ? 'Em không có email' : $_GET['email'];
+$address = empty($_GET['address']) ? 'Em không có nhà' : $_GET['address'];
+$interest = empty($_GET['interest']) ? 'Em không thích gì cả' : $_GET['interest'];
+$gender = empty($_GET['gender']) ? 'Em là gay' : $_GET['gender'];
+$date = empty($_GET['date']) ? 'Em chưa được sinh ra' : $_GET['date'];
+$pwd = empty($_GET['pwd']) ? 'Em không nhớ mật khẩu của em' : $_GET['pwd'];
 ?>
 
 <!DOCTYPE html>
