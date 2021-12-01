@@ -1,0 +1,37 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    color: #b65243;
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #00f;
+}
+
+.tag {
+    position: relative;
+    display: block;
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom right, rgb(255, 205, 213), rgb(255, 200, 255));
+    border-radius: .5rem;
+    box-shadow: .25rem .25rem 1rem .25rem rgba(0, 0, 0, .1);
+}
+
+.user {
+    margin: 1rem 0px;
+}
+
+.user h3, .user p {
+    margin: .25rem;
+}
+
+.user p {
+    font-size: 90%;
+    color: #888;
+}
