@@ -104,7 +104,9 @@ if ($isSubmit) mysqli_close($conn);
 
 function validate ($str) {
     $str = str_replace('`', '', $str);
-    $str = str_replace('\'', '', $str);
+    $str = str_replace('\'', '&#39;', $str);
+    $str = str_replace('<', '&lt;', $str);
+    $str = str_replace('>', '&gt;', $str);
 
     return $str;
 }
