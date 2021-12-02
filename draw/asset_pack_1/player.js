@@ -60,6 +60,7 @@ export class Player extends Entity {
     }
     
     createControl() {
+        // Touch control
         this.btnLeft = this.game.add.sprite(150, this.windowHeight - 150, 'arrow').setDepth(36).setScrollFactor(0).setFrame(1).setAlpha(.2).setInteractive();
         this.btnRight = this.game.add.sprite(400, this.windowHeight - 150, 'arrow').setDepth(36).setScrollFactor(0).setFlipX(true).setFrame(1).setAlpha(.2).setInteractive();
         this.btnUp = this.game.add.sprite(this.windowWidth - 150, this.windowHeight - 150, 'arrow').setDepth(36).setScrollFactor(0).setAngle(90).setFrame(1).setAlpha(.2).setInteractive();
@@ -111,6 +112,32 @@ export class Player extends Entity {
         this.btnUp.on('pointerout', () => {
             this.btnUp.setAlpha(.2).setFrame(1);
             this.btnUp.isDown = false;
+        });
+
+        // Keyboard control
+        window.addEventListener('keydown', e => {
+            if (e.key == "ArrowLeft" || e.key == "a") {
+                this.main.body.setVelocityX(-this.stats.speed);
+                this.body.setFlipX(true);
+                this.body.play('nora_walk');
+            }
+            else if (e.key == "ArrowRight" || e.key == "d") {
+                this.main.body.setVelocityX(this.stats.speed);
+                this.body.setFlipX(false);
+                this.body.play('nora_walk');
+            }
+            else if (e.key == "ArrowUp" || e.key == "w") {
+                if (this.main.body.blocked.down) {
+                    this.main.body.setVelocityY(-700);
+                }
+            }
+        });
+
+        window.addEventListener('keyup', e => {
+            if (e.key == "ArrowRight" || e.key == "ArrowLeft" || e.key == "a" || e.key == "d") {
+                this.main.body.setVelocityX(0);
+                this.body.play('nora_idle');
+            }
         });
     }
     
