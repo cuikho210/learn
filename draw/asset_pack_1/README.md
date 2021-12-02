@@ -8,6 +8,8 @@ Các bạn chạy demo trên web tại: https://cuikho210.github.io/learn/draw/a
 
 Các bạn cũng có thể tải file game.apk phía trên rồi cài vô điện thoại. Hồi đó mình không có máy tính nên trộm cái vỏ của game khác rồi nhét code của mình vô đó ^^
 
+Reset nhiệm vụ bằng cách chạy `localStorage.clear()` nha ^^
+
 ## Assets
 Cái đống ảnh này là lần đầu mình vẽ nên nó hơi bị ảo ma xíu, mình cũng không biết có quy chuẩn gì về nét, màu sắc, kích thước, ... bla bla gì đó khi vẽ không nên mình vẽ bừa đó ^^
 
