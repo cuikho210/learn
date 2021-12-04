@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 4 - PHP</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="tag">
+        <!-- Navbar -->
+        <div class="nav">
+            <a href="../"><div>Trang chủ</div></a>
+            <a href="../register"><div>Đăng ký</div></a>
+            <div class="active">Thành viên</div>
+        </div>
+
+        <!-- Body -->
+        <div>
+            <h1 class="text-red-dark">Cui Kho</h1>
+
+            <div class="hashtag">Nam</div>
+            <div class="hashtag">19 Tuổi</div>
+            <p class="text-pink">tonykms210@gmail.com</p>
+
+            <h2 class="text-pink mt-0">
+                Bạn ngọt ngào nhất thế gian ^^
+            </h2>
+
+            <p class="text-pink-dark">
+                Đến với thế giới kẹo, bạn sẽ được trở về với tuổi thơ, đắm chìm trong hương vị ngọt ngào tuyệt vời của kẹo.
+                <br>
+                Nhắm mắt lại, từ từ cảm nhận từng chút ngọt ngào tan chảy trong miệng...
+                <br>
+                Đăng ký ngay một vé và dẫn gấu đi cùng ngay thôi nào!
+            </p>
+
+            <p>
+                <span style="cursor: pointer" class="text-red mr-1" onclick="document.getElementById('form').hidden=false">[Sửa]</span>
+                <a href="./?action=remove"><span class="text-red">[Xoá]</span></a>
+            </p>
+        </div>
+
+        <!-- Form -->
+        <form action="" method="post" id="form" hidden>
+            <h2 class="text-red-dark">Sửa thông tin đăng ký</h2>
+
+            <label>
+                Tên bạn là gì?
+                <input type="text" name="name" required placeholder="Kẹo dẻo? Kẹo kéo? Hay kẹo mạch nha?">
+            </label>
+
+            <label>
+                Bạn mấy tuổi rồi?
+                <input type="number" name="age" required>
+            </label>
+
+            <label>
+                Email của bạn là gì?
+                <input type="email" name="email" required>
+            </label>
+
+            <div>
+                Bạn là nam hay nữ?
+                <br>
+                <label class="radio" style="margin-top: .25rem;">
+                    <input type="radio" name="gender" value="0" required>
+                    <span>Nam</span>
+                </label>
+    
+                <label class="radio">
+                    <input type="radio" name="gender" value="1" required>
+                    <span>Nữ</span>
+                </label>
+                <br>
+            </div>
+
+            <label>
+                Vì sao bạn đăng ký đi tới thế giới kẹo?
+                <input type="text" name="reason" required placeholder="Vì tớ thích bạn cuikho quá nên muốn tới chơi với bạn ấy ^^">
+            </label>
+
+            <label>
+                Mật khẩu của bạn là gì?
+                <input type="password" name="password" required placeholder="Mật khẩu bạn đặt lúc đăng ký đó">
+            </label>
+            
+            <div onclick="document.getElementById('form').submit()" class="btn btn1">Đăng ký</div>
+        </form>
+    </div>
+</body>
+</html>
